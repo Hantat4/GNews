@@ -13,7 +13,7 @@ header {
     box-sizing: border-box;
     overflow-x: hidden;
     margin: 0;
-}
+}  
 #searchInput {
     position: absolute;
     left: 20%; /* Adjust as needed */
@@ -28,7 +28,8 @@ header {
     display: flex;
     justify-content: center;  /* Centra el h1 horizontalmente */
     align-items: center;
-    max-width: 100%;
+    width: 100%;
+    max-width: none;
     padding: 0 20px; /* Espacio a los lados */
     box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
 }
@@ -82,6 +83,7 @@ body {
     font-size: 1.2em; /* Slightly larger font size */
     margin: 10px 0; /* Margin for spacing */
     text-align: center;
+    font-style: italic;
 }
 .Mdf, .Psy, .df {
     background-color: rgb(185, 216, 233);
@@ -230,34 +232,4 @@ body {
     height: auto;
     display: block;
     margin: 20px auto;
-}
-@media (max-width: 768px) {
-.header-container {
-    flex-direction: column;
-    align-items: center;
-}
-
-#searchInput {
-    width: 90%;
-    margin-top: 10px;
-    position: static;
-    transform: none;
-}
-
-.btn-about,
-.btn-submit {
-    position: static;
-    margin-top: 10px;
-}
-
-.logo {
-    margin-bottom: 10px;
-    position: static;
-    transform: none;
-}
-
-header {
-    text-align: center;
-    padding: 15px;
-}
 }
