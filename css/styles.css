@@ -36,7 +36,7 @@ header {
     margin: 0;
     font-size: 2em;
     position: relative;
-  z-index: 1; /* asegura que el texto esté encima si se cruzan */
+    z-index: 1; /* asegura que el texto esté encima si se cruzan */
 }
 .btn-about {
     position: absolute;
@@ -93,11 +93,6 @@ body {
 .link-noticia {
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit color from parent */
-}
-.encabezado {
-    font-size: 1.5em; /* Larger font size for headings */
-    margin-bottom: 20px; /* Space below headings */
-    text-align: center;
 }
 .contenido {
     display: flex;
