@@ -9,8 +9,10 @@ header {
     top: 0;
     z-index: 100;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    margin: 0;
 }
 #searchInput {
     position: absolute;
@@ -20,13 +22,15 @@ header {
     border-radius: 6px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Width of the search input */
 }
 .header-container {
     position: relative;
     display: flex;
     justify-content: center;  /* Centra el h1 horizontalmente */
     align-items: center;
+    max-width: 100%;
+    padding: 0 20px; /* Espacio a los lados */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
 }
 .logo {
     position: absolute;
@@ -39,7 +43,6 @@ header {
     margin: 0;
     font-size: 2em;
     position: relative;
-    z-index: 1; /* asegura que el texto esté encima si se cruzan */
 }
 .btn-about {
     position: absolute;
@@ -60,7 +63,6 @@ body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     background-color: #f2f2f2; /* Light gray background */
-    overflow-x: hidden;
 }
 .btn-volver {
     display: inline-block;
@@ -230,35 +232,32 @@ body {
     margin: 20px auto;
 }
 @media (max-width: 768px) {
+.header-container {
+    flex-direction: column;
+    align-items: center;
+}
+
 #searchInput {
+    width: 90%;
+    margin-top: 10px;
     position: static;
     transform: none;
-    width: 90%;
-    margin: 10px 0;
 }
+
+.btn-about,
+.btn-submit {
+    position: static;
+    margin-top: 10px;
+}
+
 .logo {
-    position: static;
-    transform: none;
-    height: 40px;
     margin-bottom: 10px;
-}
-
-#searchInput {
     position: static;
-    width: 90%;
-    margin: 10px 0;
     transform: none;
 }
 
-.header-container h1 {
-    font-size: 1.5em;
-    margin: 10px 0;
+header {
     text-align: center;
-}
-
-.btn-about {
-    position: static;
-    margin: 10px 0;
-    padding: 8px 16px;
+    padding: 15px;
 }
 }
