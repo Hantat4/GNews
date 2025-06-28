@@ -159,3 +159,60 @@ body {
 .hd {
     color: crimson;
 }
+.crispr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    background-color: #fefefe;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    max-width: 850px;
+    width: 100%;
+    margin: 40px auto;
+
+    text-align: left;
+    gap: 20px;
+
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #2c2c2c;
+}
+
+.crispr h1 {
+    font-size: 2em;
+    color: #12192b;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.crispr h2, .crispr h3 {
+    font-size: 1.4em;
+    color: #12192b;
+    margin-top: 30px;
+}
+
+.crispr p {
+    margin-bottom: 15px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 16px;
+    background-color: #384d86;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: b
+}
+.crispr img {
+    max-width: 100%;      /* La imagen nunca será más ancha que su contenedor */
+    height: auto;         
+    display: block;       
+    margin: 20px auto;  
+}
