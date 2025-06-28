@@ -225,3 +225,26 @@ body {
     display: block;
     margin: 20px auto;
 }
+
+@media (max-width: 768px) {
+.header-container {
+    flex-direction: column;
+    align-items: center;
+    }
+
+#searchInput {
+    width: 90%;
+    margin-top: 10px;
+    position: static;
+    transform: none;
+    }
+
+.btn-about, .btn-submit {
+    position: static;
+    margin-top: 10px;
+    }
+
+.logo {
+    margin-bottom: 10px;
+    }
+}
