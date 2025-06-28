@@ -5,7 +5,9 @@ header {
     background-color: #384d86;
     color: white;
     padding: 25px 20px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .header-container {
     position: relative;
