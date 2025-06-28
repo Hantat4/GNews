@@ -9,13 +9,18 @@
     <title>GNews</title>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <h1>GNews</h1>
-            <a href="about.html" class="btn-about">About</a>
-        </div>
+<header>
+    <div class="header-container">
         <img src="css/img/GNews.png" alt="logo" class="logo">
-    </header>
+
+        <input type="text" id="searchInput" placeholder="Search for news..." />
+        <div class="result-container"></div>
+        <h1>GNews</h1>
+
+        <a href="about.html" class="btn-about">About</a>
+    </div>
+</header>
+
 
         <p class="desc">Your source for the latest news.</p>
     <section>
@@ -35,5 +40,83 @@
         </article>
     </section>
 <footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+    const noticias = [
+    {
+    title: "Psychology Thesis-type Research",
+    description: "A thesis-type research on the effect of film violence",
+    link: "news/filmthesis.html",
+    image: "css/img/film.png",
+    class: "Psy",
+    tags: ["Science", "psychology", "research", "thesis", "film", "violence", "adolescence"]
+    },
+    {
+    title: "Genetically modified babies with CRISPR",
+    description: "Scientists create genetically modified babies using CRISPR.",
+    link: "news/modif.html",
+    image: "css/img/CSP.png",
+    class: "Mdf",
+    tags: ["Science", "Genetics", "CRISPR", "modification", "babies", "technology"]
+    },
+    {
+    title: "About GNews",
+    description: "What is GNews and why it exists",
+    link: "about.html",
+    image: "css/img/GNews.png",
+    class: "Psy",
+    tags: ["about", "what", "gnews", "about gnews"]
+    }
+];
+
+    const fuse = new Fuse(noticias, {
+    keys: ['title', 'description', 'tags'],
+    threshold: 0.3, // 0 = exact match, 1 = loose
+    distance: 100, // Distancia máxima entre coincidencias 
+    ignoreLocation: true, // Ignora si la palabra está lejos del inicio del texto
+    });
+
+    const input = document.getElementById("searchInput");
+    const section = document.querySelector("section");
+    const originalContent = section.innerHTML; // Guardamos las noticias originales
+    input.addEventListener("input", () => {
+    const searchTerm = input.value.trim();
+
+    if (searchTerm === "") {
+        section.innerHTML = originalContent; // Restaura las noticias originales
+        return;
+    }
+
+    const results = fuse.search(searchTerm);
+    mostrarResultados(results.map(r => r.item));
+    });
+
+        
+        function mostrarResultados(resultados) {
+    const section = document.querySelector("section");
+    section.innerHTML = "";
+
+    if (resultados.length === 0) {
+    section.innerHTML = "<p style='text-align:center'>No results found.</p>";
+    return;
+    }
+
+    resultados.forEach(noticia => {
+    const article = document.createElement("article");
+    article.className = noticia.class;
+
+    article.innerHTML = `
+    <a href="${noticia.link}" class="link-noticia">
+        <h2>${noticia.title}</h2>
+        <p>${noticia.description}</p>
+        <img src="${noticia.image}" alt="${noticia.title}" class="imgf" />
+    </a>
+    `;
+    section.appendChild(article);
+    });
+}
+
+</script>
+
 </body>
 </html>
