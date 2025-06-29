@@ -4,7 +4,7 @@ html {
 header {
     background-color: #384d86;
     color: white;
-    padding: 25px 20px;
+    padding: 0px 10px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -19,7 +19,7 @@ header {
     left: 20%; /* Adjust as needed */
     transform: translateX(-50%);
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 40px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -30,55 +30,219 @@ header {
     align-items: center;
     width: 100%;
     max-width: none;
-    padding: 0 20px; /* Espacio a los lados */
+    padding: 30px 20px; /* Espacio a los lados */
     box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
 }
 .logo {
     position: absolute;
-    left: 20px; /* Espacio desde la izquierda */
+    left: 15px; /* Espacio desde la izquierda */
     top: 50%; /* Centra verticalmente */
     transform: translateY(-50%); /* Ajusta para centrar completamente */
-    height: 50px; /* Ajusta el tamaño del logo */
+    height: 60px; /* Ajusta el tamaño del logo */
 }
 .header-container h1 {
-    margin: 0;
+    margin: 0; /* Espacio superior e inferior */
     font-size: 2em;
     position: relative;
 }
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    margin: auto; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #384d86;  /* azul oscuro */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 20px 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-volver:hover {
+  background-color: #4863ac;  /* un poco más claro al pasar el mouse */
+}
+
+body.dark-mode .btn-volver {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #2c2c2c;  /* gris oscuro */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 20px 20px;
+    transition: background-color 0.3s ease;
+}
+body.dark-mode .btn-volver:hover {
+  background-color: #242424;  /* un poco más oscuro al pasar el mouse */
+}
+
+.btn-about,
+.btn-dark {
+    font-weight: 600; /* o usa 'bold' si prefieres */
+    font-family: inherit;
+    font-size: 1em;
+}
+.btn-dark {
+    position: absolute;
+    right: 100px; /* Espacio desde la derecha */
+    padding: 10px 20px;
+    background-color: white;
+    color: #384d86;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-dark:hover {
+    background-color: #ddd;
+}
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .btn-dark{
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .Mdf,
+body.dark-mode .Psy,
+body.dark-mode .df,
+body.dark-mode .intro,
+body.dark-mode .indice,
+body.dark-mode .about-container,
+body.dark-mode .crispr,
+body.dark-mode .dfc {
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+body.dark-mode a {
+    color: #ddd;
+}
+
+
+body.dark-mode .btn-about{
+    background-color: #333 !important;
+}
+.btn-about:visited {
+    color: inherit;
+}
+
+body.dark-mode .btn-about{
+    background-color: #333 !important;
+    color: #fff !important;        /* ← esto faltaba */
+}
+
+body.dark-mode .btn-about:visited {
+    color: #fff !important;        /* ← esto es necesario por ser un <a> */
+}
+/* MODO CLARO: estilos normales */
+
 .btn-about {
     position: absolute;
-    right: 0; 
-    padding: 8px 16px;
+    right: 0; /* Espacio desde la derecha */
+    padding: 10px 20px;
     background-color: white;
     color: #384d86;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    
 }
 .btn-about:hover {
-    background-color: #e1e1e1;
+    background-color: #ddd !important;
 }
+
+/* MODO OSCURO: override solo en dark mode */
+body.dark-mode .btn-about {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+.btn-about {
+    background-color: white !important;
+    color: #384d86 !important;
+}
+
+
+
+
+
+/* Estilos normales */
+.intro,
+.statement,
+.justification,
+.objectives,
+.hypothesis,
+.theoretical,
+.methodology,
+.analysis,
+.conclusions,
+.bibliography {
+    background-color: #fff;
+    color: #222;
+}
+
 body {
-    font-family: Arial, sans-serif; /* Default font */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: #f2f2f2; /* Light gray background */
+    visibility: hidden;
 }
-.btn-volver {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #384d86;  /* azul oscuro */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    margin: 20px auto;
-    transition: background-color 0.3s ease;
+
+/* Estilos para contenido en modo oscuro */
+body.dark-mode .intro,
+body.dark-mode .statement,
+body.dark-mode .justification,
+body.dark-mode .objectives,
+body.dark-mode .hypothesis,
+body.dark-mode .theoretical,
+body.dark-mode .methodology,
+body.dark-mode .analysis,
+body.dark-mode .conclusions,
+body.dark-mode .bibliography,
+body.dark-mode .crispr,
+body.dark-mode h2 {
+    background-color: #2c2c2c; /* fondo oscuro */
+    color: #eee; /* texto claro */
 }
-.btn-volver:hover {
-  background-color: #2c3e66;  /* un poco más oscuro al pasar el mouse */
+
+body.dark-mode .indice {
+    background-color: #2c2c2c;
+    color: #eee;
 }
+
+body.dark-mode .indice a {
+    color: #ccc;
+}
+
+body.dark-mode footer {
+    background-color: #121212;
+    color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
 .desc {
     font-size: 1.2em; /* Slightly larger font size */
     margin: 10px 0; /* Margin for spacing */
@@ -198,28 +362,17 @@ body {
 }
 .crispr h1 {
     font-size: 2em;
-    color: #12192b;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 10px;
 }
 .crispr h2, .crispr h3{
     font-size: 1.4em;
-    color: #12192b;
+    color: #000000;
     margin-top: 30px;
 }
 .crispr p {
     margin-bottom: 15px;
-}
-.btn-volver {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 16px;
-    background-color: #384d86;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: b
 }
 .crispr img {
     max-width: 100%;      /* La imagen nunca será más ancha que su contenedor */

@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.documentElement.classList.add('dark-mode');
+        } 
+    </script>
+
     <link rel="stylesheet" href="css/styles.css">
 </html>
 <head>
@@ -16,8 +22,9 @@
         <input type="text" id="searchInput" placeholder="Search for news..." />
         <div class="result-container"></div>
         <h1>GNews</h1>
-
-        <a href="about.html" class="btn-about">About</a>
+        
+        <button id="toggleDark" class=" btn btn-dark">Dark Mode</button>
+        <a href="about.html" class="btn btn-about">About</a>
     </div>
 </header>
 
@@ -128,9 +135,10 @@
     `;
     section.appendChild(article);
     });
-}
+    }
 
 </script>
+<script src="js/darkmode.js"></script>
 
 </body>
 </html>
