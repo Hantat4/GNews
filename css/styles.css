@@ -90,7 +90,7 @@ body.dark-mode .btn-volver:hover {
 }
 .btn-dark {
     position: absolute;
-    right: 100px; /* Espacio desde la derecha */
+    right: 110px; /* Espacio desde la derecha */
     padding: 10px 20px;
     background-color: white;
     color: #36544f;
@@ -155,7 +155,7 @@ body.dark-mode .btn-about:visited {
 
 .btn-about {
     position: absolute;
-    right: 0; /* Espacio desde la derecha */
+    right: 10px; /* Espacio desde la derecha */
     padding: 10px 20px;
     background-color: white;
     color: #384d86;
