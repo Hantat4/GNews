@@ -30,7 +30,7 @@ header {
     align-items: center;
     width: 100%;
     max-width: none;
-    padding: 30px 20px; /* Espacio a los lados */
+    padding: 15px 15px; /* Espacio a los lados */
     box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
 }
 .logo {
