@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 header {
-    background-color: #384d86;
+    background-color: #334f53;
     color: white;
     padding: 0px 10px;
     position: sticky;
@@ -55,7 +55,7 @@ body {
 .btn-volver {
     display: inline-block;
     padding: 10px 10px;
-    background-color: #384d86;  /* azul oscuro */
+    background-color: #0b8185;  /* azul oscuro */
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -64,7 +64,7 @@ body {
     transition: background-color 0.3s ease;
 }
 .btn-volver:hover {
-  background-color: #4863ac;  /* un poco más claro al pasar el mouse */
+  background-color: #0c8f94;  /* un poco más claro al pasar el mouse */
 }
 
 body.dark-mode .btn-volver {
@@ -93,7 +93,7 @@ body.dark-mode .btn-volver:hover {
     right: 100px; /* Espacio desde la derecha */
     padding: 10px 20px;
     background-color: white;
-    color: #384d86;
+    color: #36544f;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -176,7 +176,7 @@ body.dark-mode .btn-about {
 }
 .btn-about {
     background-color: white !important;
-    color: #384d86 !important;
+    color: #36544f !important;
 }
 
 
@@ -248,9 +248,13 @@ body.dark-mode footer {
     margin: 10px 0; /* Margin for spacing */
     text-align: center;
     font-style: italic;
+    color: black; /* Dark gray for better readability */
+}
+body.dark-mode .desc {
+    color: #ddd; /* Light gray for dark mode */
 }
 .Mdf, .Psy, .df {
-    background-color: rgb(185, 216, 233);
+    background-color: #c8c9b5;
     color: black; /* Black text for contrast */
     padding: 20px;
     border-radius: 12px;
