@@ -512,3 +512,21 @@ body.dark-mode .desc {
     line-height: 1.6;
   }
 }
+
+@media (max-width: 360px) {
+  /* Imágenes en artículos */
+  .crispr img,
+  .dfc img,
+  article img,
+  .about-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Si alguna imagen tenía max-width menor (como 50%), la forzamos al 100% */
+  .dfc img {
+    max-width: 100% !important;
+  }
+}
