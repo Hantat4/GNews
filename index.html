@@ -9,20 +9,18 @@
         } 
     </script>
     <link rel="stylesheet" href="css/styles.css">
-<head>
     <title>GNews</title>
 </head>
 <body>
 <header>
     <div class="header-container">
         <img src="css/img/GNews.png" alt="logo" class="logo">
-
+        <h1>GNews</h1>        
+        <div class="right-controls">
         <input type="text" id="searchInput" placeholder="Search for news..." />
-        <div class="result-container"></div>
-        <h1>GNews</h1>
-        
-        <button id="toggleDark" class=" btn btn-dark">Dark Mode</button>
+        <button id="toggleDark" class="btn btn-dark">Dark Mode</button>
         <a href="about.html" class="btn btn-about">About</a>
+        </div>
     </div>
 </header>
 
@@ -78,14 +76,7 @@
     class: "df",
     tags: ["DeepFakes", "technology", "video", "fake", "threat", "AI"]
     }
-    ,{
-    title: "About GNews",
-    description: "What is GNews and why it exists",
-    link: "about.html",
-    image: "css/img/GNews.png",
-    class: "Psy",
-    tags: ["about", "what", "gnews", "about gnews"]
-    }
+    ,
 ];
 
     const fuse = new Fuse(noticias, {

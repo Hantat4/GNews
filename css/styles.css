@@ -1,21 +1,54 @@
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable; /* Añadir esto para reservar un espacio para el scrollbar */
+    /* Es decir esto fijara un tamaño para el scrollbar */
 }
+
+/* Esto quita el scrollbar */
+/* html::-webkit-scrollbar {
+    display: none;
+} */
+
+/* Cambiar el estilo de tu scrollbar a uno mucho más moderno */
+/* Scrollbar */
+.cm-theme-light,
+.cm-editor {
+height: 100%;
+}
+
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #ffffff4d;
+}
+
+
 header {
     background-color: #334f53;
     color: white;
-    padding: 0px 10px;
+    padding: 0px;
     position: sticky;
-    top: 0;
+    top: 0; /* Fija el header en la parte superior */
     z-index: 100;
-    width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    margin: 0;
+    margin: 0;;
 }  
+.header-container {
+    display: flex;
+    justify-content: center;  /* Centra el h1 horizontalmente */
+    align-items: center;
+
+    max-width: none;
+    padding: 5px; /* Espacio a los lados */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
+}
 #searchInput {
-    position: absolute;
+    position: fixed; /* Permite que el input se mantenga en la parte superior */
+    top: 30px; /* Espacio desde la parte superior */
     left: 20%; /* Adjust as needed */
     transform: translateX(-50%);
     padding: 10px;
@@ -23,31 +56,16 @@ header {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.header-container {
-    position: relative;
-    display: flex;
-    justify-content: center;  /* Centra el h1 horizontalmente */
-    align-items: center;
-    width: 100%;
-    max-width: none;
-    padding: 15px 15px; /* Espacio a los lados */
-    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */    
-}
 .logo {
-    position: absolute;
+    position: absolute; /* Permite posicionar el logo */
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
     left: 15px; /* Espacio desde la izquierda */
-    top: 50%; /* Centra verticalmente */
-    transform: translateY(-50%); /* Ajusta para centrar completamente */
-    height: 60px; /* Ajusta el tamaño del logo */
 }
-.header-container h1 {
-    margin: 0; /* Espacio superior e inferior */
-    font-size: 2em;
-    position: relative;
-}
+
 body {
     font-family: Arial, sans-serif; /* Default font */
-    margin: auto; /* Remove default margin */
+    margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     background-color: #f2f2f2; /* Light gray background */
 }
@@ -88,9 +106,24 @@ body.dark-mode .btn-volver:hover {
     font-family: inherit;
     font-size: 1em;
 }
+
+.btn-about {
+    position: fixed; /* Permite que el botón se mantenga en la parte superior */
+    top: 30px; /* Espacio desde la parte superior */
+    right: 20px; /* Espacio desde la derecha */
+    padding: 10px 20px;
+    background-color: white;
+    color: #384d86;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    
+}
 .btn-dark {
-    position: absolute;
-    right: 110px; /* Espacio desde la derecha */
+    position: fixed ; /* Permite que el botón se mantenga en la parte superior */
+    top: 30px; /* Espacio desde la parte superior */
+    right: 120px; /* Espacio desde la derecha */
     padding: 10px 20px;
     background-color: white;
     color: #36544f;
@@ -153,18 +186,6 @@ body.dark-mode .btn-about:visited {
 }
 /* MODO CLARO: estilos normales */
 
-.btn-about {
-    position: absolute;
-    right: 10px; /* Espacio desde la derecha */
-    padding: 10px 20px;
-    background-color: white;
-    color: #384d86;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    
-}
 .btn-about:hover {
     background-color: #ddd !important;
 }
@@ -389,4 +410,105 @@ body.dark-mode .desc {
     height: auto;
     display: block;
     margin: 20px auto;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Elimina scroll horizontal forzado */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Reordena header y elementos flotantes */
+  header {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    position: relative;
+    width: 40px;
+    margin: 10px auto;
+    left: 0;
+  }
+
+  /* Botones que estaban fijos arriba */
+  .btn-dark,
+  .btn-about,
+  #searchInput {
+    position: relative;
+    padding: 10px 0px;
+    margin: 10px auto;
+
+    display: block;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+.btn-dark {
+    padding: 10px 10px;
+}
+
+  /* Fila superior (índice e intro) apilada */
+  .fila-superior {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .indice,
+  .intro {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Cualquier contenido con ancho limitado */
+  .contenido,
+  .cde,
+  .about-container,
+  .Mdf,
+  .Psy,
+  .df,
+  .crispr,
+  .dfc,
+  .cde article {
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+    box-sizing: border-box;
+  }
+
+  /* Imágenes responsivas */
+  .crispr img,
+  .dfc img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Reducción de padding general */
+  body {
+    padding: 10px;
+  }
+
+  /* Footer o bloques de texto */
+  .about-container,
+  .crispr,
+  .dfc {
+    font-size: 1em;
+    line-height: 1.6;
+  }
 }
