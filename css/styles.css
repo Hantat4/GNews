@@ -420,33 +420,33 @@ body.dark-mode .desc {
 
 @media (max-width: 768px) {
   /* Elimina scroll horizontal forzado */
-  html, body {
+html, body {
     overflow-x: hidden;
-  }
+}
 
   /* Reordena header y elementos flotantes */
-  header {
+header {
     position: relative;
     padding: 10px;
     text-align: center;
-  }
+}
 
-  .header-container {
+.header-container {
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .logo {
+.logo {
     position: relative;
     width: 40px;
     margin: 10px auto;
     left: 0;
-  }
+}
 
   /* Botones que estaban fijos arriba */
-  .btn-dark,
-  .btn-about,
-  #searchInput {
+.btn-dark,
+.btn-about,
+#searchInput {
     position: relative;
     padding: 10px 0px;
     margin: 10px auto;
@@ -459,74 +459,74 @@ body.dark-mode .desc {
     width: 100%;
     max-width: 300px;
     text-align: center;
-  }
+}
 .btn-dark {
     padding: 10px 10px;
 }
 
   /* Fila superior (índice e intro) apilada */
-  .fila-superior {
+.fila-superior {
     flex-direction: column;
     gap: 20px;
-  }
+}
 
-  .indice,
-  .intro {
+.indice,
+.intro {
     width: 100%;
     padding: 15px;
-  }
+}
 
   /* Cualquier contenido con ancho limitado */
-  .contenido,
-  .cde,
-  .about-container,
-  .Mdf,
-  .Psy,
-  .df,
-  .crispr,
-  .dfc,
-  .cde article {
+.contenido,
+.cde,
+.about-container,
+.Mdf,
+.Psy,
+.df,
+.crispr,
+.dfc,
+.cde article {
     width: 100%;
     padding: 15px;
     margin: 10px auto;
     box-sizing: border-box;
-  }
+}
 
   /* Imágenes responsivas */
-  .crispr img,
-  .dfc img {
+.crispr img,
+.dfc img {
     max-width: 100%;
     height: auto;
-  }
+}
 
   /* Reducción de padding general */
-  body {
+body {
     padding: 10px;
-  }
+}
 
   /* Footer o bloques de texto */
-  .about-container,
-  .crispr,
-  .dfc {
+.about-container,
+.crispr,
+.dfc {
     font-size: 1em;
     line-height: 1.6;
-  }
+}
 }
 
 @media (max-width: 360px) {
   /* Imágenes en artículos */
-  .crispr img,
-  .dfc img,
-  article img,
-  .about-container img {
+.crispr img,
+.dfc img,
+article img,
+.about-container img {
     max-width: 100% !important;
     height: auto !important;
     display: block;
     margin: 10px auto;
-  }
+}
 
   /* Si alguna imagen tenía max-width menor (como 50%), la forzamos al 100% */
-  .dfc img {
+.dfc img {
     max-width: 100% !important;
-  }
+}
 }
