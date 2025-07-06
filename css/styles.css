@@ -25,9 +25,12 @@ height: 8px;
 background-color: #ffffff4d;
 }
 
+/* Cambiar el color del scrollbar al pasar el mouse #334f53*/
+
+
 
 header {
-    background-color: #334f53;
+    background-color: #cfb53b; /* Azul oscuro */
     color: white;
     padding: 0px;
     position: sticky;
@@ -67,7 +70,7 @@ body {
     font-family: Arial, sans-serif; /* Default font */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    background-color: #f2f2f2; /* Light gray background */
+    background-color: rgb(212, 212, 212);
 }
 
 .btn-volver {
@@ -138,7 +141,7 @@ body.dark-mode .btn-volver:hover {
     background-color: #ddd;
 }
 body.dark-mode {
-    background-color: #1e1e1e;
+    background-color: #1d1d1d;
     color: #f1f1f1;
 }
 
@@ -275,7 +278,7 @@ body.dark-mode .desc {
     color: #ddd; /* Light gray for dark mode */
 }
 .Mdf, .Psy, .df {
-    background-color: #c8c9b5;
+    background-color: #e2ebf5;
     color: black; /* Black text for contrast */
     padding: 20px;
     border-radius: 12px;
@@ -411,10 +414,16 @@ body.dark-mode .desc {
     display: block;
     margin: 20px auto;
 }
-
-
-
-
+footer {
+    background-color: #000000; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
 
