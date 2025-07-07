@@ -108,12 +108,21 @@ footer {
   color: #555;
 }
 
+.register-link {
+    color: #000000;
+    text-decoration: none;
+    
+}
+
 /* Dark Mode */
 body.dark-mode {
   background-color: #1d1d1d;
   color: #eee;
 }
-
+body.dark-mode .register-link {
+  color: #0ff;
+  text-decoration: none;
+}
 body.dark-mode .container {
   background-color: #2c2c2c;
   color: #eee;
