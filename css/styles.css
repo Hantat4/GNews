@@ -117,9 +117,14 @@ body.dark-mode .btn-volver:hover {
     transition: background-color 0.3s ease;
 }
 
+body.dark-mode .btn-login {
+    background-color: #333;
+    color: white;
+}
 
 .btn-about,
-.btn-dark {
+.btn-dark,
+.btn-login {
     font-weight: 600; /* o usa 'bold' si prefieres */
     font-family: inherit;
     font-size: 1em;
