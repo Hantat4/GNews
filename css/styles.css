@@ -487,7 +487,8 @@ header {
   /* Botones que estaban fijos arriba */
 .btn-dark,
 .btn-about,
-#searchInput {
+#searchInput,
+.btn-login {
     position: relative;
     padding: 10px 0px;
     margin: 10px auto;
@@ -504,8 +505,7 @@ header {
 .btn-dark {
     padding: 10px 10px;
 }
-
-  /* Fila superior (índice e intro) apilada */
+    /* Fila superior (índice e intro) apilada */
 .fila-superior {
     flex-direction: column;
     gap: 20px;
