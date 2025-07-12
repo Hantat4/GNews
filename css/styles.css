@@ -426,7 +426,8 @@ body.dark-mode .desc {
     color: #000000;
     margin-top: 30px;
 }
-body.dark-mode .crispr h3 {
+
+body.dark-mode  .crispr h3 {
     color: #eee;
 } 
 .crispr p {
